@@ -7,32 +7,44 @@ public class PlayerController : MonoBehaviour
 
     public Rigidbody2D body;
     public float speed;
-
-    public bool isGrounded;
+    public float jumpForce;
+    public Vector2 jump;
+    public bool isGrounded = true;
 
 
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start(){
         speed = 7;
+        jumpForce = 7;
+        jump = new Vector2(0.0f, 2.0f);
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update(){
         body.velocity = new Vector2(Input.GetAxis("Horizontal") * speed, body.velocity.y);
         
-        if(Input.GetKey(KeyCode.Space) & isGrounded){
-            body.velocity = new Vector2(body.velocity.x, speed);
+        if(Input.GetKeyDown(KeyCode.Space) && isGrounded){
+            body.AddForce(jump * jumpForce, ForceMode2D.Impulse);
             isGrounded = false;
         }
     }
 
-    // https://gamedev.stackexchange.com/questions/181291/how-can-i-tell-if-a-gameobject-is-currently-touching-another-gameobject-with-a-s
-    void OnCollisionEnter(Collision collision) {
-        if (collision.gameObject.CompareTag("Ground")) {
-            isGrounded = true;
+     // Detectar colisão com o chão
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            isGrounded = true;  // Marca como no chão
         }
-
     }
+
+    // Detectar saída de colisão com o chão
+    void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            isGrounded = false;  // Marca como não no chão
+        }
+    }
+
 }
