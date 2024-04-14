@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : Entity
 {
 
     public Rigidbody2D body;
@@ -45,6 +45,10 @@ public class PlayerController : MonoBehaviour
         {
             isGrounded = false;  // Marca como não no chão
         }
+    }
+
+    public override void TakeDamage(int damage){
+        base.TakeDamage(damage);
     }
 
 }
