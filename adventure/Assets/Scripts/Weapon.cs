@@ -14,7 +14,13 @@ public class Weapon : MonoBehaviour {
 
     void Shoot(){
         Quaternion fixedRotation = Quaternion.Euler(0, 0, 0);
-        Instantiate(bulletPrefab, transform.position, fixedRotation);
+        GameObject bullet = Instantiate(bulletPrefab, transform.position, fixedRotation);
+        if (Input.mousePosition.x > 175){
+            bullet.GetComponent<Bullet>().SetSpeed(18f);
+        } else {
+            bullet.GetComponent<Bullet>().SetSpeed(-18f);
+        }
+
     }
 
 }   
