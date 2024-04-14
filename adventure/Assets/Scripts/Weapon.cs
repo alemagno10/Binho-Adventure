@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour {
 
-    public Transform firePoint;
     public GameObject bulletPrefab;
 
     void Update(){
@@ -15,7 +14,7 @@ public class Weapon : MonoBehaviour {
 
     void Shoot(){
         Quaternion fixedRotation = Quaternion.Euler(0, 0, 0);
-        Instantiate(bulletPrefab, firePoint.position, fixedRotation);
+        Instantiate(bulletPrefab, transform.position, fixedRotation);
     }
 
 }   
