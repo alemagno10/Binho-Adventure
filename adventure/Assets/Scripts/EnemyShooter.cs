@@ -15,6 +15,10 @@ public class EnemyShooter : Entity {
         base.TakeDamage(damage);
     }
 
+    public override void handleDeath(){
+        Destroy(gameObject);
+    }
+
     void Shoot(){
         Quaternion fixedRotation = Quaternion.Euler(0, 0, 0);
         GameObject bullet = Instantiate(bulletPrefab, transform.position, fixedRotation);
