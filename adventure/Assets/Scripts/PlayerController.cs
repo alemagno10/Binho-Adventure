@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
     void Update(){
         body.velocity = new Vector2(Input.GetAxis("Horizontal") * speed, body.velocity.y);
         
-        if(Input.GetKeyDown(KeyCode.Space) && isGrounded){
+        if((Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKey (KeyCode.W)) && isGrounded){
             body.AddForce(jump * jumpForce, ForceMode2D.Impulse);
             isGrounded = false;
         }
