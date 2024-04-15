@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyShooter : Entity {
 
     public GameObject bulletPrefab;
+    public Rigidbody2D player;
 
     void Start(){
         SetHP(30f);
@@ -24,6 +25,11 @@ public class EnemyShooter : Entity {
         GameObject bullet = Instantiate(bulletPrefab, transform.position, fixedRotation);
         bullet.GetComponent<Bullet>().SetSelf("Enemy");
         bullet.GetComponent<Bullet>().SetTarget("Player");
-        bullet.GetComponent<Bullet>().SetSpeed(-18f);
+        if(transform.position.x < player.position.x){
+            bullet.GetComponent<Bullet>().SetSpeed(18f);
+        } else {
+            bullet.GetComponent<Bullet>().SetSpeed(-18f);
+        }
+
     }
 }
