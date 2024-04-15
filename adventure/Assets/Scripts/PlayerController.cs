@@ -29,6 +29,11 @@ public class PlayerController : Entity {
     void OnCollisionEnter2D(Collision2D collision){
         if (collision.gameObject.CompareTag("Ground")){
             isGrounded = true;  // Marca como no chão
+        } 
+    
+        if (collision.gameObject.CompareTag("Die")) {
+            body.position = new Vector3(-0.5f, -0.5f, 0.0f);
+            body.velocity = new Vector2(0f, 0f);
         }
     }
 
@@ -44,7 +49,10 @@ public class PlayerController : Entity {
     }
 
     public override void handleDeath(){
-        gameObject.SetActive(false);
+        // gameObject.SetActive(false);
+        body.position = new Vector3(-0.5f, -0.5f, 0.0f);
+        body.velocity = new Vector2(0f, 0f);
+        base.SetHP(30f);
     }
 
 }
