@@ -6,10 +6,11 @@ public class EnemyShooter : Entity {
 
     public GameObject bulletPrefab;
     public Rigidbody2D player;
+    private System.Random rand = new System.Random();
 
     void Start(){
         SetHP(30f);
-        InvokeRepeating("Shoot", 3.0f, 3.0f);
+        InvokeRepeating("Shoot", rand.Next(1,4), 3.0f);
     }
 
     public override void TakeDamage(int damage){
