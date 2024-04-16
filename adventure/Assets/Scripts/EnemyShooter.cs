@@ -33,4 +33,16 @@ public class EnemyShooter : Entity {
         }
 
     }
+
+    void OnCollisionEnter2D(Collision2D collision){
+        GameObject gameObject = collision.gameObject;
+        
+        if (gameObject.CompareTag("Player")){
+            if((gameObject.GetComponent<Entity>().transform.position.y - transform.position.y) < 0.5){
+                gameObject.GetComponent<Entity>().TakeDamage(5);
+            } else {
+                TakeDamage((int)GetHP());
+            }
+        }
+    }
 }

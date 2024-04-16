@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+using UnityEngine.SceneManagement;
+
 public class PlayerController : Entity {
 
     public Rigidbody2D body;
@@ -32,8 +34,7 @@ public class PlayerController : Entity {
         } 
     
         if (collision.gameObject.CompareTag("Die")) {
-            body.position = new Vector3(-0.5f, -0.5f, 0.0f);
-            body.velocity = new Vector2(0f, 0f);
+            SceneManager.LoadScene("SampleScene");
         }
     }
 
@@ -49,10 +50,7 @@ public class PlayerController : Entity {
     }
 
     public override void handleDeath(){
-        // gameObject.SetActive(false);
-        body.position = new Vector3(-0.5f, -0.5f, 0.0f);
-        body.velocity = new Vector2(0f, 0f);
-        base.SetHP(30f);
+        SceneManager.LoadScene("SampleScene");
     }
 
 }
