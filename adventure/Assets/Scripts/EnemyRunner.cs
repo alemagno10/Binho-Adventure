@@ -35,7 +35,7 @@ public class EnemyRunner : Entity {
             }
         }
 
-        if (gameObject.CompareTag("Wall")){
+        if (gameObject.CompareTag("Wall") || gameObject.CompareTag("Enemy")){
             Flip();
         }
     }

@@ -34,7 +34,7 @@ public class PlayerController : Entity {
         } 
     
         if (collision.gameObject.CompareTag("Die")) {
-            SceneManager.LoadScene("SampleScene");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 
@@ -50,7 +50,8 @@ public class PlayerController : Entity {
     }
 
     public override void handleDeath(){
-        SceneManager.LoadScene("SampleScene");
+        print(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
 }
