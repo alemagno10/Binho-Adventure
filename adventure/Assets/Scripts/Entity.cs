@@ -3,9 +3,6 @@ using UnityEngine;
 public class Entity : MonoBehaviour {
     public float hp = 30f;
     public float totalHp = 30f;
-    public AudioClip damageSound; // AudioClip for when taking damage
-
-    private AudioSource audioSource; // AudioSource component to play the sound
 
     void Start() {
         
