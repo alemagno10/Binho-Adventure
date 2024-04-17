@@ -16,11 +16,13 @@ public class PlayerController : Entity {
     public float deathSoundVolume = 0.5f; // Volume regulator for the death sound
 
     private AudioSource audioSource; // AudioSource component to play the sound
+    private SceneChanger sceneChanger; 
 
     void Start() {
         speed = 7;
         jumpForce = 7;
         jump = new Vector2(0.0f, 2.0f);
+        sceneChanger = FindObjectOfType<SceneChanger>();
 
         // Initialize the audio source
         audioSource = GetComponent<AudioSource>();
@@ -48,8 +50,14 @@ public class PlayerController : Entity {
             isGrounded = true;  // Marks as on the ground
         } else if (collision.gameObject.CompareTag("Die")) {
             handleDeath(); // Handle death when colliding with deadly objects
+        }   
+    } 
+
+    void OnTriggerEnter2D(Collider2D collider) {
+        if (collider.gameObject.CompareTag("Portal")) {
+            sceneChanger.Next("Level2-Onca"); 
         }
-    }
+    }  
 
     void OnCollisionExit2D(Collision2D collision) {
         if (collision.gameObject.CompareTag("Ground")) {
