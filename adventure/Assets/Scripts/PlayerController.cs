@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;  // Needed for IEnumerator
 
 public class PlayerController : Entity {
     public Rigidbody2D body;
@@ -9,8 +10,10 @@ public class PlayerController : Entity {
     public bool isGrounded = true;
     public AudioClip damageSound; // AudioClip for damage sound
     public AudioClip jumpSound; // AudioClip for jump sound
+    public AudioClip deathSound; // AudioClip for death sound
     public float damageSoundVolume = 0.5f; // Volume regulator for the damage sound
     public float jumpSoundVolume = 0.5f; // Volume regulator for the jump sound
+    public float deathSoundVolume = 0.5f; // Volume regulator for the death sound
 
     private AudioSource audioSource; // AudioSource component to play the sound
 
@@ -43,10 +46,8 @@ public class PlayerController : Entity {
     void OnCollisionEnter2D(Collision2D collision) {
         if (collision.gameObject.CompareTag("Ground")) {
             isGrounded = true;  // Marks as on the ground
-        }
-    
-        if (collision.gameObject.CompareTag("Die")) {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name); // Restart the scene
+        } else if (collision.gameObject.CompareTag("Die")) {
+            handleDeath(); // Handle death when colliding with deadly objects
         }
     }
 
@@ -58,7 +59,6 @@ public class PlayerController : Entity {
 
     public override void TakeDamage(int damage) {
         base.TakeDamage(damage);
-
         // Play the damage sound at the specified volume
         if (audioSource != null && damageSound != null) {
             audioSource.PlayOneShot(damageSound, damageSoundVolume);
@@ -66,6 +66,22 @@ public class PlayerController : Entity {
     }
 
     public override void handleDeath() {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name); // Restart the scene on death
+        // Play the death sound at the specified volume
+        if (audioSource != null && deathSound != null) {
+            // Pause the game by setting time scale to 0
+            Time.timeScale = 0;
+            audioSource.PlayOneShot(deathSound, deathSoundVolume);
+            StartCoroutine(ReloadSceneAfterDeathSound(deathSound.length));
+        } else {
+            // If no sound is assigned, reload immediately
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+    }
+
+    IEnumerator ReloadSceneAfterDeathSound(float delay) {
+        // Wait for the death sound to play while everything is paused
+        yield return new WaitForSecondsRealtime(delay);  // Use WaitForSecondsRealtime since timeScale is 0
+        Time.timeScale = 1;  // Resume the game time
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
