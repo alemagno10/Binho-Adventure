@@ -11,7 +11,7 @@ public class HealthDisplay : MonoBehaviour
     {
         if (player != null && healthText != null)
         {
-            healthText.text = "HP: " + player.GetHP().ToString();
+            healthText.text = "HP: " + player.GetHP().ToString() + " / " + player.GetTotalHp().ToString();
             
             if (player.GetHP() <= 10)
             {
