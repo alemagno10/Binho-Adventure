@@ -255,6 +255,10 @@ PrefabInstance:
       value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 1757061446311310886, guid: f5905541af770e842828073b2abd87db, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 1402262174968672451, guid: 6cfec8f95feb70c458909a0b90037729, type: 3}
+    - target: {fileID: 1757061446311310886, guid: f5905541af770e842828073b2abd87db, type: 3}
       propertyPath: shootingVolume
       value: 0.05
       objectReference: {fileID: 0}
@@ -4146,7 +4150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0673b403daffa754aa7d5a15baae0659, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 7834532453760802332, guid: 2b0b5c4d92a123745bd7a358cc681943, type: 3}
+  bulletPrefab: {fileID: 3586210240365438561, guid: 7ff700e5ffa1d8442b58c5ab2c65716d, type: 3}
   shootSound: {fileID: 8300000, guid: d854e775f80c947849d233f6f4edb596, type: 3}
   shootingVolume: 0.1
 --- !u!1 &813545560
@@ -16402,6 +16406,10 @@ PrefabInstance:
       value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 1757061446311310886, guid: f5905541af770e842828073b2abd87db, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 1402262174968672451, guid: 6cfec8f95feb70c458909a0b90037729, type: 3}
+    - target: {fileID: 1757061446311310886, guid: f5905541af770e842828073b2abd87db, type: 3}
       propertyPath: shootingVolume
       value: 0.05
       objectReference: {fileID: 0}
@@ -16482,6 +16490,10 @@ PrefabInstance:
       propertyPath: deathVolume
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1757061446311310886, guid: f5905541af770e842828073b2abd87db, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 1402262174968672451, guid: 6cfec8f95feb70c458909a0b90037729, type: 3}
     - target: {fileID: 1757061446311310886, guid: f5905541af770e842828073b2abd87db, type: 3}
       propertyPath: damageVolume
       value: 0.5
@@ -16670,6 +16682,10 @@ PrefabInstance:
       value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 1757061446311310886, guid: f5905541af770e842828073b2abd87db, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 1402262174968672451, guid: 6cfec8f95feb70c458909a0b90037729, type: 3}
+    - target: {fileID: 1757061446311310886, guid: f5905541af770e842828073b2abd87db, type: 3}
       propertyPath: shootingVolume
       value: 0.05
       objectReference: {fileID: 0}
@@ -16773,6 +16789,10 @@ PrefabInstance:
       propertyPath: deathVolume
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1757061446311310886, guid: f5905541af770e842828073b2abd87db, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 1402262174968672451, guid: 6cfec8f95feb70c458909a0b90037729, type: 3}
     - target: {fileID: 1757061446311310886, guid: f5905541af770e842828073b2abd87db, type: 3}
       propertyPath: shootingVolume
       value: 0.05
@@ -17153,6 +17173,10 @@ PrefabInstance:
       propertyPath: deathVolume
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1757061446311310886, guid: f5905541af770e842828073b2abd87db, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 1402262174968672451, guid: 6cfec8f95feb70c458909a0b90037729, type: 3}
     - target: {fileID: 1757061446311310886, guid: f5905541af770e842828073b2abd87db, type: 3}
       propertyPath: shootingVolume
       value: 0.05
@@ -30079,6 +30103,10 @@ PrefabInstance:
       value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 1757061446311310886, guid: f5905541af770e842828073b2abd87db, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 1402262174968672451, guid: 6cfec8f95feb70c458909a0b90037729, type: 3}
+    - target: {fileID: 1757061446311310886, guid: f5905541af770e842828073b2abd87db, type: 3}
       propertyPath: shootingVolume
       value: 0.05
       objectReference: {fileID: 0}
@@ -30304,6 +30332,10 @@ PrefabInstance:
       value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 1757061446311310886, guid: f5905541af770e842828073b2abd87db, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 1402262174968672451, guid: 6cfec8f95feb70c458909a0b90037729, type: 3}
+    - target: {fileID: 1757061446311310886, guid: f5905541af770e842828073b2abd87db, type: 3}
       propertyPath: shootingVolume
       value: 0.05
       objectReference: {fileID: 0}
@@ -30368,6 +30400,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 646041555}
+    - target: {fileID: 1381714677957343641, guid: e74772e6b8f62ed47b5d497787aea649, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 1402262174968672451, guid: 6cfec8f95feb70c458909a0b90037729, type: 3}
     - target: {fileID: 8015141558210836602, guid: e74772e6b8f62ed47b5d497787aea649, type: 3}
       propertyPath: m_Name
       value: EnemyHybrid
