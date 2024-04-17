@@ -3886,7 +3886,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 7834532453760802332, guid: 2b0b5c4d92a123745bd7a358cc681943, type: 3}
-  shootSound: {fileID: 0}
+  shootSound: {fileID: 8300000, guid: a7c85f67d18c7b04fb9cec0a71fe7021, type: 3}
 --- !u!1 &813545560
 GameObject:
   m_ObjectHideFlags: 0
@@ -16123,6 +16123,14 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 646041555}
+    - target: {fileID: 1757061446311310886, guid: f5905541af770e842828073b2abd87db, type: 3}
+      propertyPath: shootSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a7c85f67d18c7b04fb9cec0a71fe7021, type: 3}
+    - target: {fileID: 1757061446311310886, guid: f5905541af770e842828073b2abd87db, type: 3}
+      propertyPath: shootingVolume
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 1838659493883979684, guid: f5905541af770e842828073b2abd87db, type: 3}
       propertyPath: m_LocalPosition.x
       value: 83.92
@@ -16184,6 +16192,14 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 646041555}
+    - target: {fileID: 1757061446311310886, guid: f5905541af770e842828073b2abd87db, type: 3}
+      propertyPath: shootSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a7c85f67d18c7b04fb9cec0a71fe7021, type: 3}
+    - target: {fileID: 1757061446311310886, guid: f5905541af770e842828073b2abd87db, type: 3}
+      propertyPath: shootingVolume
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 1838659493883979684, guid: f5905541af770e842828073b2abd87db, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.28
@@ -16346,6 +16362,14 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 646041555}
+    - target: {fileID: 1757061446311310886, guid: f5905541af770e842828073b2abd87db, type: 3}
+      propertyPath: shootSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a7c85f67d18c7b04fb9cec0a71fe7021, type: 3}
+    - target: {fileID: 1757061446311310886, guid: f5905541af770e842828073b2abd87db, type: 3}
+      propertyPath: shootingVolume
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 1838659493883979684, guid: f5905541af770e842828073b2abd87db, type: 3}
       propertyPath: m_LocalPosition.x
       value: 73.11
@@ -16407,6 +16431,14 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 646041555}
+    - target: {fileID: 1757061446311310886, guid: f5905541af770e842828073b2abd87db, type: 3}
+      propertyPath: shootSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a7c85f67d18c7b04fb9cec0a71fe7021, type: 3}
+    - target: {fileID: 1757061446311310886, guid: f5905541af770e842828073b2abd87db, type: 3}
+      propertyPath: shootingVolume
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 1838659493883979684, guid: f5905541af770e842828073b2abd87db, type: 3}
       propertyPath: m_LocalPosition.x
       value: 50.38
@@ -16602,6 +16634,14 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 646041555}
+    - target: {fileID: 1757061446311310886, guid: f5905541af770e842828073b2abd87db, type: 3}
+      propertyPath: shootSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a7c85f67d18c7b04fb9cec0a71fe7021, type: 3}
+    - target: {fileID: 1757061446311310886, guid: f5905541af770e842828073b2abd87db, type: 3}
+      propertyPath: shootingVolume
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 1838659493883979684, guid: f5905541af770e842828073b2abd87db, type: 3}
       propertyPath: m_LocalPosition.x
       value: 112.83
@@ -29098,6 +29138,14 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 646041555}
+    - target: {fileID: 1757061446311310886, guid: f5905541af770e842828073b2abd87db, type: 3}
+      propertyPath: shootSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a7c85f67d18c7b04fb9cec0a71fe7021, type: 3}
+    - target: {fileID: 1757061446311310886, guid: f5905541af770e842828073b2abd87db, type: 3}
+      propertyPath: shootingVolume
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 1838659493883979684, guid: f5905541af770e842828073b2abd87db, type: 3}
       propertyPath: m_LocalPosition.x
       value: 15.07
@@ -29219,6 +29267,14 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 646041555}
+    - target: {fileID: 1757061446311310886, guid: f5905541af770e842828073b2abd87db, type: 3}
+      propertyPath: shootSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a7c85f67d18c7b04fb9cec0a71fe7021, type: 3}
+    - target: {fileID: 1757061446311310886, guid: f5905541af770e842828073b2abd87db, type: 3}
+      propertyPath: shootingVolume
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 1838659493883979684, guid: f5905541af770e842828073b2abd87db, type: 3}
       propertyPath: m_LocalPosition.x
       value: 116.51
