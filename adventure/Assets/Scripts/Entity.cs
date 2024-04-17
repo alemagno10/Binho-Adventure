@@ -20,7 +20,7 @@ public class Entity : MonoBehaviour {
         hp = value;
     }
 
-    protected float GetHP() {
+    public float GetHP() {
         return hp;
     }
 }
