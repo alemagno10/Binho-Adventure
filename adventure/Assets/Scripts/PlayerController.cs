@@ -2,14 +2,15 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PlayerController : Entity {
-
     public Rigidbody2D body;
     public float speed;
     public float jumpForce;
     public Vector2 jump;
     public bool isGrounded = true;
     public AudioClip damageSound; // AudioClip for damage sound
+    public AudioClip jumpSound; // AudioClip for jump sound
     public float damageSoundVolume = 0.5f; // Volume regulator for the damage sound
+    public float jumpSoundVolume = 0.5f; // Volume regulator for the jump sound
 
     private AudioSource audioSource; // AudioSource component to play the sound
 
@@ -32,6 +33,10 @@ public class PlayerController : Entity {
         if ((Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKey(KeyCode.W)) && isGrounded) {
             body.AddForce(jump * jumpForce, ForceMode2D.Impulse);
             isGrounded = false;
+            // Play the jump sound at the specified volume
+            if (audioSource != null && jumpSound != null) {
+                audioSource.PlayOneShot(jumpSound, jumpSoundVolume);
+            }
         }
     }
 

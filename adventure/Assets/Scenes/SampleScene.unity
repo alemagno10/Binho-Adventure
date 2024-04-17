@@ -3736,7 +3736,9 @@ MonoBehaviour:
   jump: {x: 0, y: 2}
   isGrounded: 1
   damageSound: {fileID: 8300000, guid: 02002f542442b4a52b19f792844ad7cd, type: 3}
+  jumpSound: {fileID: 8300000, guid: 885d1f3e85dc24f82b0728fe6d077843, type: 3}
   damageSoundVolume: 0.5
+  jumpSoundVolume: 0.5
 --- !u!61 &646041554
 BoxCollider2D:
   m_ObjectHideFlags: 0
