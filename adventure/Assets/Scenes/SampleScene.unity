@@ -3887,6 +3887,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 7834532453760802332, guid: 2b0b5c4d92a123745bd7a358cc681943, type: 3}
   shootSound: {fileID: 8300000, guid: a7c85f67d18c7b04fb9cec0a71fe7021, type: 3}
+  shootingVolume: 0.1
 --- !u!1 &813545560
 GameObject:
   m_ObjectHideFlags: 0
