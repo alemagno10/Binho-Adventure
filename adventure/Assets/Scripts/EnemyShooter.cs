@@ -6,9 +6,9 @@ public class EnemyShooter : Entity {
     public AudioClip shootSound;  // Reference to the shooting sound clip
     public AudioClip damageSound;  // AudioClip for when taking damage
     public AudioClip deathSound;  // AudioClip for when dying
-    public float shootingVolume = 0.5f;  // Public variable to control the shooting volume
+    public float shootingVolume = 0.05f;  // Public variable to control the shooting volume
     public float damageVolume = 0.5f;  // Public variable to control the damage sound volume
-    public float deathVolume = 0.5f;  // Public variable to control the death sound volume
+    public float deathVolume = 1.5f;  // Public variable to control the death sound volume
 
     private AudioSource audioSource;
 
