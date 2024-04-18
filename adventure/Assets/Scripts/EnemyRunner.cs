@@ -1,11 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyRunner : Entity {
     public int speed = 5;
     public int damage = 30;
-    public float flipTime;
     public float flipDelta;
 
     // Audio properties
@@ -15,13 +12,14 @@ public class EnemyRunner : Entity {
     public float deathVolume = 0.5f; // Volume regulator for the death sound
 
     private AudioSource audioSource;
+    private bool isDead = false; // Flag to ensure death is handled only once
     private System.Random rand = new System.Random();
 
     void Start() {
         flipDelta = rand.Next(1, 4);
         InvokeRepeating("Flip", 1.0f, flipDelta);
         SetHP(20f);
-        
+
         // Initialize the audio source
         audioSource = GetComponent<AudioSource>();
         if (audioSource == null) {
@@ -30,7 +28,9 @@ public class EnemyRunner : Entity {
     }
 
     void Update() {
-        transform.position = new Vector3(transform.position.x - speed * Time.deltaTime, transform.position.y, transform.position.z);
+        if (!isDead) {
+            transform.position = new Vector3(transform.position.x - speed * Time.deltaTime, transform.position.y, transform.position.z);
+        }
     }
 
     void Flip() {
@@ -38,6 +38,10 @@ public class EnemyRunner : Entity {
     }
 
     void OnCollisionEnter2D(Collision2D collision) {
+        if (isDead) {
+            return; // Ignore collisions if already dead
+        }
+
         GameObject gameObject = collision.gameObject;
 
         if (gameObject.CompareTag("Player")) {
@@ -55,13 +59,29 @@ public class EnemyRunner : Entity {
     }
 
     public override void TakeDamage(int damage) {
+        if (isDead) {
+            return; // Ignore if already dead
+        }
+
         base.TakeDamage(damage);
-        PlaySound(damageSound, damageVolume);
+        if (hp <= 0) {
+            handleDeath();
+        } else {
+            PlaySound(damageSound, damageVolume);
+        }
     }
 
     public override void handleDeath() {
-        PlaySound(deathSound, deathVolume);
-        Destroy(gameObject);
+        if (!isDead) {
+            isDead = true; // Set the flag to prevent multiple death handling
+            PlaySound(deathSound, deathVolume);
+            // Optionally, disable the collider here if the object has one
+            Collider2D collider = GetComponent<Collider2D>();
+            if (collider != null) {
+                collider.enabled = false;
+            }
+            Destroy(gameObject, deathSound.length); // Delay destruction to allow sound to play
+        }
     }
 
     // Helper method to play a sound

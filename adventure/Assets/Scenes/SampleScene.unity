@@ -3995,9 +3995,11 @@ MonoBehaviour:
   damageSound: {fileID: 8300000, guid: 02002f542442b4a52b19f792844ad7cd, type: 3}
   jumpSound: {fileID: 8300000, guid: 885d1f3e85dc24f82b0728fe6d077843, type: 3}
   deathSound: {fileID: 8300000, guid: bf339e5ccf98946c8b9bad4beb601eaa, type: 3}
+  portalSound: {fileID: 8300000, guid: 066b86d19fb024511942a6bce170a902, type: 3}
   damageSoundVolume: 0.5
   jumpSoundVolume: 0.5
   deathSoundVolume: 0.5
+  portalSoundVolume: 0.5
 --- !u!61 &646041554
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16651,12 +16653,11 @@ MonoBehaviour:
   totalHp: 30
   speed: 10
   damage: 30
-  flipTime: 0
   flipDelta: 10.8
-  damageSound: {fileID: 0}
-  deathSound: {fileID: 0}
+  damageSound: {fileID: 8300000, guid: 8b1547f8215494cb2ba1731ee3ce450c, type: 3}
+  deathSound: {fileID: 8300000, guid: d9cefd44ebd8c4b339346e8bbfe66102, type: 3}
   damageVolume: 0.5
-  deathVolume: 0.5
+  deathVolume: 1.5
 --- !u!1001 &1389231041
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16763,7 +16764,6 @@ MonoBehaviour:
   totalHp: 30
   speed: 10
   damage: 30
-  flipTime: 0
   flipDelta: 10.8
   damageSound: {fileID: 8300000, guid: 8b1547f8215494cb2ba1731ee3ce450c, type: 3}
   deathSound: {fileID: 8300000, guid: d9cefd44ebd8c4b339346e8bbfe66102, type: 3}
@@ -30072,6 +30072,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2069333064}
   - component: {fileID: 2069333065}
+  - component: {fileID: 2069333066}
   m_Layer: 0
   m_Name: background_binho
   m_TagString: Untagged
@@ -30146,6 +30147,102 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!82 &2069333066
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2069333063}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: d9cefd44ebd8c4b339346e8bbfe66102, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &2127461158
 PrefabInstance:
   m_ObjectHideFlags: 0
