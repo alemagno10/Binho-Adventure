@@ -39,6 +39,7 @@ https://www.pixilart.com/draw/laser-bullet-ae4007960cdd8be
 https://sk.pinterest.com/pin/337207090846013665/
 
 **Efeitos sonoros**:
+
 https://pixabay.com/sound-effects/search/
 https://mixkit.co/free-sound-effects/discover/
 https://uppbeat.io/browse/search 
