@@ -43,6 +43,10 @@ public class PlayerController : Entity {
                 audioSource.PlayOneShot(jumpSound, jumpSoundVolume);
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.R)) {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
     }
 
     void OnCollisionEnter2D(Collision2D collision) {
