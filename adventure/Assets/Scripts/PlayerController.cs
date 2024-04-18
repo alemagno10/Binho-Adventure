@@ -51,15 +51,29 @@ public class PlayerController : Entity {
         }
     }
 
+    void OnCollisionEnter2D(Collision2D collision) {
+        if (collision.gameObject.CompareTag("Ground")) {
+            isGrounded = true;  // Marks as on the ground
+        } else if (collision.gameObject.CompareTag("Die")) {
+            handleDeath(); // Handle death when colliding with deadly objects
+        }   
+    } 
+
     void OnTriggerEnter2D(Collider2D collider) {
         if (collider.gameObject.CompareTag("Portal")) {
-            PlayPortalSoundAndLoadNext("Level2-Onca"); 
+            if (audioSource != null && portalSound != null) {
+                audioSource.PlayOneShot(portalSound, portalSoundVolume);
+            }
+            sceneChanger.Next("Level2-Onca"); 
         }
 
         if (collider.gameObject.CompareTag("Portal1")) {
+            if (audioSource != null && portalSound != null) {
+                audioSource.PlayOneShot(portalSound, portalSoundVolume);
+            }
             sceneChanger.Next("VictoryMenu"); 
         }
-    }  
+    }   
 
     void OnCollisionExit2D(Collision2D collision) {
         if (collision.gameObject.CompareTag("Ground")) {
@@ -93,27 +107,5 @@ public class PlayerController : Entity {
         yield return new WaitForSecondsRealtime(delay);  // Use WaitForSecondsRealtime since timeScale is 0
         Time.timeScale = 1;  // Resume the game time
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
-
-    // Call this method when entering the portal
-    void PlayPortalSoundAndLoadNext(string nextScene) {
-        // Play the portal sound at the specified volume
-        if (audioSource != null && portalSound != null) {
-            // Pause the game by setting time scale to 0
-            Time.timeScale = 0;
-            audioSource.PlayOneShot(portalSound, portalSoundVolume);
-            StartCoroutine(LoadSceneAfterPortalSound(portalSound.length, nextScene));
-        } else {
-            // If no sound is assigned, load the next scene immediately
-            sceneChanger.Next(nextScene);
-        }
-    }
-
-    // Coroutine to load the scene after the portal sound plays
-    IEnumerator LoadSceneAfterPortalSound(float delay, string nextScene) {
-        // Wait for the portal sound to play while everything is paused
-        yield return new WaitForSecondsRealtime(delay);  // Use WaitForSecondsRealtime since timeScale is 0
-        Time.timeScale = 1;  // Resume the game time
-        sceneChanger.Next(nextScene);
     }
 }
