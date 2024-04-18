@@ -22,6 +22,16 @@ Mas nem tudo está perdido! Você também pode neutralizar os inimigos de duas f
 O jogo é composto por duas fases, onde você deverá passar pelos mais diversos inimigos até conseguir resgatar o amado crocodilo Binho.
 Boa sorte em sua jornada!
 
+## Movimentação
+
+**W**: pular
+
+**A**: andar para a esquerda
+
+**D**: andar para a direita
+
+**Botão esquerdo do mouse**: atirar
+
 ### Assets utilizados
 
 **Portal**:
