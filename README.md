@@ -22,4 +22,23 @@ Mas nem tudo está perdido! Você também pode neutralizar os inimigos de duas f
 O jogo é composto por duas fases, onde você deverá passar pelos mais diversos inimigos até conseguir resgatar o amado crocodilo Binho.
 Boa sorte em sua jornada!
 
+### Assets utilizados
+
+**Portal**:
+
+https://br.pinterest.com/pin/263390278199826715/
+
+**Tipos de bala**:
+
+https://www.pixilart.com/art/laserbeam-d509f00ae2bee5e
+
+https://www.pixilart.com/draw/laser-bullet-ae4007960cdd8be
+
+**Background**:
+
+https://sk.pinterest.com/pin/337207090846013665/
+
+
+
+
 
