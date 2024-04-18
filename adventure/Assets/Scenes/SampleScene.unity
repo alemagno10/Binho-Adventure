@@ -3729,6 +3729,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 30
+  damageSound: {fileID: 8300000, guid: 02002f542442b4a52b19f792844ad7cd, type: 3}
   body: {fileID: 646041555}
   speed: 7
   jumpForce: 7
@@ -3887,7 +3888,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 7834532453760802332, guid: 2b0b5c4d92a123745bd7a358cc681943, type: 3}
-  shootSound: {fileID: 8300000, guid: a7c85f67d18c7b04fb9cec0a71fe7021, type: 3}
+  shootSound: {fileID: 8300000, guid: d854e775f80c947849d233f6f4edb596, type: 3}
   shootingVolume: 0.1
 --- !u!1 &813545560
 GameObject:
@@ -16128,7 +16129,7 @@ PrefabInstance:
     - target: {fileID: 1757061446311310886, guid: f5905541af770e842828073b2abd87db, type: 3}
       propertyPath: shootSound
       value: 
-      objectReference: {fileID: 8300000, guid: a7c85f67d18c7b04fb9cec0a71fe7021, type: 3}
+      objectReference: {fileID: 8300000, guid: 906605ab792ba40a686918a9121b183e, type: 3}
     - target: {fileID: 1757061446311310886, guid: f5905541af770e842828073b2abd87db, type: 3}
       propertyPath: shootingVolume
       value: 0.05
@@ -16197,7 +16198,11 @@ PrefabInstance:
     - target: {fileID: 1757061446311310886, guid: f5905541af770e842828073b2abd87db, type: 3}
       propertyPath: shootSound
       value: 
-      objectReference: {fileID: 8300000, guid: a7c85f67d18c7b04fb9cec0a71fe7021, type: 3}
+      objectReference: {fileID: 8300000, guid: 91eb7c1d116534c038ed091a47f753eb, type: 3}
+    - target: {fileID: 1757061446311310886, guid: f5905541af770e842828073b2abd87db, type: 3}
+      propertyPath: damageSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 906605ab792ba40a686918a9121b183e, type: 3}
     - target: {fileID: 1757061446311310886, guid: f5905541af770e842828073b2abd87db, type: 3}
       propertyPath: shootingVolume
       value: 0.05
@@ -16432,6 +16437,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 30
+  damageSound: {fileID: 0}
   speed: 10
   damage: 30
   flipTime: 0
@@ -16451,7 +16457,7 @@ PrefabInstance:
     - target: {fileID: 1757061446311310886, guid: f5905541af770e842828073b2abd87db, type: 3}
       propertyPath: shootSound
       value: 
-      objectReference: {fileID: 8300000, guid: a7c85f67d18c7b04fb9cec0a71fe7021, type: 3}
+      objectReference: {fileID: 8300000, guid: 906605ab792ba40a686918a9121b183e, type: 3}
     - target: {fileID: 1757061446311310886, guid: f5905541af770e842828073b2abd87db, type: 3}
       propertyPath: shootingVolume
       value: 0.05
@@ -16520,7 +16526,7 @@ PrefabInstance:
     - target: {fileID: 1757061446311310886, guid: f5905541af770e842828073b2abd87db, type: 3}
       propertyPath: shootSound
       value: 
-      objectReference: {fileID: 8300000, guid: a7c85f67d18c7b04fb9cec0a71fe7021, type: 3}
+      objectReference: {fileID: 8300000, guid: 906605ab792ba40a686918a9121b183e, type: 3}
     - target: {fileID: 1757061446311310886, guid: f5905541af770e842828073b2abd87db, type: 3}
       propertyPath: shootingVolume
       value: 0.05
@@ -16723,7 +16729,7 @@ PrefabInstance:
     - target: {fileID: 1757061446311310886, guid: f5905541af770e842828073b2abd87db, type: 3}
       propertyPath: shootSound
       value: 
-      objectReference: {fileID: 8300000, guid: a7c85f67d18c7b04fb9cec0a71fe7021, type: 3}
+      objectReference: {fileID: 8300000, guid: 906605ab792ba40a686918a9121b183e, type: 3}
     - target: {fileID: 1757061446311310886, guid: f5905541af770e842828073b2abd87db, type: 3}
       propertyPath: shootingVolume
       value: 0.05
@@ -29227,7 +29233,7 @@ PrefabInstance:
     - target: {fileID: 1757061446311310886, guid: f5905541af770e842828073b2abd87db, type: 3}
       propertyPath: shootSound
       value: 
-      objectReference: {fileID: 8300000, guid: a7c85f67d18c7b04fb9cec0a71fe7021, type: 3}
+      objectReference: {fileID: 8300000, guid: 906605ab792ba40a686918a9121b183e, type: 3}
     - target: {fileID: 1757061446311310886, guid: f5905541af770e842828073b2abd87db, type: 3}
       propertyPath: shootingVolume
       value: 0.05
@@ -29356,7 +29362,7 @@ PrefabInstance:
     - target: {fileID: 1757061446311310886, guid: f5905541af770e842828073b2abd87db, type: 3}
       propertyPath: shootSound
       value: 
-      objectReference: {fileID: 8300000, guid: a7c85f67d18c7b04fb9cec0a71fe7021, type: 3}
+      objectReference: {fileID: 8300000, guid: 906605ab792ba40a686918a9121b183e, type: 3}
     - target: {fileID: 1757061446311310886, guid: f5905541af770e842828073b2abd87db, type: 3}
       propertyPath: shootingVolume
       value: 0.05

@@ -1,18 +1,33 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Entity : MonoBehaviour {  
-    public float hp = 30f;  
+public class Entity : MonoBehaviour {
+    public float hp = 30f;
+    public AudioClip damageSound; // AudioClip for when taking damage
 
-    public virtual void TakeDamage(int damage){
+    private AudioSource audioSource; // AudioSource component to play the sound
+
+    void Start() {
+        // Get the AudioSource component on the same GameObject this script is attached to
+        audioSource = GetComponent<AudioSource>();
+        // If there isn't one, add it dynamically
+        if (audioSource == null) {
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
+    }
+
+    public virtual void TakeDamage(int damage) {
         this.hp -= damage;
-        if(this.hp <= 0){
+        // Play the damage sound
+        if (audioSource != null && damageSound != null) {
+            audioSource.PlayOneShot(damageSound);
+        }
+
+        if (this.hp <= 0) {
             handleDeath();
         }
     }
 
-    public virtual void handleDeath(){
+    public virtual void handleDeath() {
         Destroy(gameObject);
     }
 
