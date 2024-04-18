@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level2-Onca.unity
     guid: 62416f06a4b6579499c9f89f34dc7e47
+  - enabled: 1
+    path: Assets/Scenes/VictoryMenu.unity
+    guid: 5cc1de1ae177249458057c7c4bf1c05b
   m_configObjects: {}
