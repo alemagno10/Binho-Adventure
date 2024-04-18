@@ -777,9 +777,29 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 646041555}
     - target: {fileID: 1757061446311310886, guid: f5905541af770e842828073b2abd87db, type: 3}
+      propertyPath: deathSound
+      value: 
+      objectReference: {fileID: 8300000, guid: d9cefd44ebd8c4b339346e8bbfe66102, type: 3}
+    - target: {fileID: 1757061446311310886, guid: f5905541af770e842828073b2abd87db, type: 3}
+      propertyPath: shootSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 906605ab792ba40a686918a9121b183e, type: 3}
+    - target: {fileID: 1757061446311310886, guid: f5905541af770e842828073b2abd87db, type: 3}
+      propertyPath: damageSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 8b1547f8215494cb2ba1731ee3ce450c, type: 3}
+    - target: {fileID: 1757061446311310886, guid: f5905541af770e842828073b2abd87db, type: 3}
+      propertyPath: deathVolume
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1757061446311310886, guid: f5905541af770e842828073b2abd87db, type: 3}
       propertyPath: bulletPrefab
       value: 
       objectReference: {fileID: 1402262174968672451, guid: 6cfec8f95feb70c458909a0b90037729, type: 3}
+    - target: {fileID: 1757061446311310886, guid: f5905541af770e842828073b2abd87db, type: 3}
+      propertyPath: shootingVolume
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 1838659493883979684, guid: f5905541af770e842828073b2abd87db, type: 3}
       propertyPath: m_LocalPosition.x
       value: 197.25
