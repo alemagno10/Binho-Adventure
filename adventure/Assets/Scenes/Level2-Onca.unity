@@ -761,6 +761,10 @@ MonoBehaviour:
   damage: 30
   flipTime: 0
   flipDelta: 10.8
+  damageSound: {fileID: 0}
+  deathSound: {fileID: 0}
+  damageVolume: 0.5
+  deathVolume: 0.5
 --- !u!1001 &330714059
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -844,7 +848,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &342454115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3474,7 +3478,7 @@ Transform:
   m_GameObject: {fileID: 646041552}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 163.78, y: -1.19, z: 0}
+  m_LocalPosition: {x: -22, y: -1.19, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3591,6 +3595,10 @@ PrefabInstance:
     - target: {fileID: 3170897966517156866, guid: a689356fb583f6e4f8e63acd68e4587f, type: 3}
       propertyPath: m_Name
       value: Portal
+      objectReference: {fileID: 0}
+    - target: {fileID: 3170897966517156866, guid: a689356fb583f6e4f8e63acd68e4587f, type: 3}
+      propertyPath: m_TagString
+      value: Portal1
       objectReference: {fileID: 0}
     - target: {fileID: 5978068975901583635, guid: a689356fb583f6e4f8e63acd68e4587f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8688,6 +8696,10 @@ MonoBehaviour:
   damage: 30
   flipTime: 0
   flipDelta: 10.8
+  damageSound: {fileID: 0}
+  deathSound: {fileID: 0}
+  damageVolume: 0.5
+  deathVolume: 0.5
 --- !u!1 &1260266110 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5207543264857535674, guid: 45ff842d78fb71143ac69bb93c6eb0bc, type: 3}
@@ -8711,6 +8723,10 @@ MonoBehaviour:
   damage: 30
   flipTime: 0
   flipDelta: 10.8
+  damageSound: {fileID: 0}
+  deathSound: {fileID: 0}
+  damageVolume: 0.5
+  deathVolume: 0.5
 --- !u!1 &1294016819
 GameObject:
   m_ObjectHideFlags: 0
@@ -8868,6 +8884,10 @@ MonoBehaviour:
   damage: 30
   flipTime: 0
   flipDelta: 10.8
+  damageSound: {fileID: 0}
+  deathSound: {fileID: 0}
+  damageVolume: 0.5
+  deathVolume: 0.5
 --- !u!1001 &1833190477
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8876,6 +8896,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6263501596763637023, guid: 463ae0ee8bf34ca40aa2c1e87ea53cae, type: 3}
+      propertyPath: followSpeed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6263501596763637023, guid: 463ae0ee8bf34ca40aa2c1e87ea53cae, type: 3}
+      propertyPath: followDistance
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6644163299617434611, guid: 463ae0ee8bf34ca40aa2c1e87ea53cae, type: 3}
       propertyPath: m_Name
       value: Binho

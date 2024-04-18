@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using System.Collections;  // Needed for IEnumerator
+using System.Collections; 
 
 public class PlayerController : Entity {
     public Rigidbody2D body;
@@ -16,7 +16,7 @@ public class PlayerController : Entity {
     public float deathSoundVolume = 0.5f; // Volume regulator for the death sound
 
     private AudioSource audioSource; // AudioSource component to play the sound
-    private SceneChanger sceneChanger; 
+    private SceneChanger sceneChanger;
 
     void Start() {
         speed = 7;
@@ -56,6 +56,10 @@ public class PlayerController : Entity {
     void OnTriggerEnter2D(Collider2D collider) {
         if (collider.gameObject.CompareTag("Portal")) {
             sceneChanger.Next("Level2-Onca"); 
+        }
+
+        if (collider.gameObject.CompareTag("Portal1")) {
+            sceneChanger.Next("VictoryMenu"); 
         }
     }  
 
