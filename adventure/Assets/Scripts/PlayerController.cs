@@ -90,22 +90,9 @@ public class PlayerController : Entity {
     }
 
     public override void handleDeath() {
-        // Play the death sound at the specified volume
         if (audioSource != null && deathSound != null) {
-            // Pause the game by setting time scale to 0
-            Time.timeScale = 0;
             audioSource.PlayOneShot(deathSound, deathSoundVolume);
-            StartCoroutine(ReloadSceneAfterDeathSound(deathSound.length));
-        } else {
-            // If no sound is assigned, reload immediately
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        }
-    }
-
-    IEnumerator ReloadSceneAfterDeathSound(float delay) {
-        // Wait for the death sound to play while everything is paused
-        yield return new WaitForSecondsRealtime(delay);  // Use WaitForSecondsRealtime since timeScale is 0
-        Time.timeScale = 1;  // Resume the game time
+        } 
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
