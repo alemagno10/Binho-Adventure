@@ -32,6 +32,8 @@ Boa sorte em sua jornada!
 
 **Botão esquerdo do mouse**: atirar
 
+**R**: recomeçar a fase
+
 ### Assets utilizados
 
 **Portal**:
